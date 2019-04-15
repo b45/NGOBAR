@@ -70,13 +70,35 @@
 
     <!-- Youtube dan Instagram -->
     <section class="social bg-light" id="social">
-      <dic class="container">
-        <div class="row">
+      <div class="container">
+        <div class="row pt-4 mb-4">
           <div class="col text-center">
             <h2>Social Media</h2>
           </div>
         </div>
-      </dic>
+        <div class="row justify-content-center">
+          <div class="col-md-5">
+            <div class="row">
+              <div class="col-md-4">
+                <img src="img/profile1.png" width="200" class="rounded-circle img-thumbnail">
+              </div>
+              <div class="col-md-8">
+                <h5>Web Programming UNPAS</h5>
+                <p>7000 Subscribers</p>
+              </div>
+            </div>
+            <div class="row mt-3 pb-3">
+              <div class="col">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/8NErnWLWB5o?rel=0" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5">
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Portfolio -->
