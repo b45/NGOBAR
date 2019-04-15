@@ -96,6 +96,28 @@
             </div>
           </div>
           <div class="col-md-5">
+            <div class="row">
+              <div class="col-md-4">
+                <img src="img/profile1.png" width="200" class="rounded-circle img-thumbnail">
+              </div>
+                <div class="col-md-8">
+                  <h5>@sandhikagalih</h5>
+                  <p>7000 Followers.</p>
+                </div>
+            </div>
+            <div class="row mt-3 pb-3">
+              <div class="col">
+                <div class="ig-thumbnail">
+                  <img src="img/thumbs/1.png" alt="">
+                </div>
+                <div class="ig-thumbnail">
+                  <img src="img/thumbs/2.png" alt="">
+                </div>
+                <div class="ig-thumbnail">
+                  <img src="img/thumbs/3.png" alt="">
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
