@@ -68,6 +68,16 @@
       </div>
     </section>
 
+    <!-- Youtube dan Instagram -->
+    <section class="social" id="social">
+      <dic class="container">
+        <div class="row">
+          <div class="div col">
+            
+          </div>
+        </div>
+      </dic>
+    </section>
 
     <!-- Portfolio -->
     <section class="portfolio bg-light" id="portfolio">
