@@ -23,6 +23,13 @@ $ytProfilePic = $result['items'][0]['snippet']['thumbnails']['medium']['url'];
 $ytChName = $result['items'][0]['snippet']['title'];
 $ytSubs = $result['items'][0]['statistics']['subscriberCount'];
 
+$urlSearchYt = 'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UC0Z_hiZisZ29O2oijgz2dxQ&key=AIzaSyAyIEd-qtixd_8xUbcGRPIpO40q3tS-M5g&maxResults=1&order=date';
+
+$result = get_curl($urlSearchYt);
+
+// pengambilan data video terahir youtube
+$latestVidId = $result['items'][0]['id']['videoId'];
+
 
 ?>
 
@@ -118,7 +125,7 @@ $ytSubs = $result['items'][0]['statistics']['subscriberCount'];
             <div class="row mt-3 pb-3">
               <div class="col">
                 <div class="embed-responsive embed-responsive-16by9">
-                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/8NErnWLWB5o?rel=0" allowfullscreen></iframe>
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?= $latestVidId ;?>?rel=0" allowfullscreen></iframe>
                 </div>
               </div>
             </div>
