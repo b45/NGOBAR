@@ -6,9 +6,12 @@ curl_setopt($curl, CURLOPT_URL, 'https://www.googleapis.com/youtube/v3/channels?
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 // eksekusi
 $result = curl_exec($curl);
+curl_close($curl);
 
 $result = json_decode($result,true);
-var_dump($result);
+
+// pengambilan yt profile picture
+$ytProfilePic = $result['items'][0]['snippet']['thumbnails']['medium']['url'];
 
 ?>
 
@@ -94,7 +97,7 @@ var_dump($result);
           <div class="col-md-5">
             <div class="row">
               <div class="col-md-4">
-                <img src="img/profile1.png" width="200" class="rounded-circle img-thumbnail">
+                <img src="<?= $ytProfilePic ;?>" width="200" class="rounded-circle img-thumbnail">
               </div>
               <div class="col-md-8">
                 <h5>Web Programming UNPAS</h5>
