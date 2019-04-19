@@ -1,19 +1,28 @@
 <?php 
-$curl = curl_init();
-// set opsi
-curl_setopt($curl, CURLOPT_URL, 'https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=UC0Z_hiZisZ29O2oijgz2dxQ&key=AIzaSyAyIEd-qtixd_8xUbcGRPIpO40q3tS-M5g');
-// data yang dikembalikan berupa teks
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-// eksekusi
-$result = curl_exec($curl);
-curl_close($curl);
 
-$result = json_decode($result,true);
+function get_curl($url)
+{
+  $curl = curl_init();
+  // set opsi
+  curl_setopt($curl, CURLOPT_URL,$url);
+  // data yang dikembalikan berupa teks
+  curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+  // eksekusi
+  $result = curl_exec($curl);
+  curl_close($curl);
+  
+  return json_decode($result,true);
+}
+// url rest API channels youtube 
+$urlChYt = 'https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=UC0Z_hiZisZ29O2oijgz2dxQ&key=AIzaSyAyIEd-qtixd_8xUbcGRPIpO40q3tS-M5g';
+
+$result = get_curl($urlChYt);
 
 // pengambilan data dari youtube
 $ytProfilePic = $result['items'][0]['snippet']['thumbnails']['medium']['url'];
 $ytChName = $result['items'][0]['snippet']['title'];
 $ytSubs = $result['items'][0]['statistics']['subscriberCount'];
+
 
 ?>
 
