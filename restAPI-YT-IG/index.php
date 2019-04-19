@@ -1,3 +1,17 @@
+<?php 
+$curl = curl_init();
+// set opsi
+curl_setopt($curl, CURLOPT_URL, 'https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=UC0Z_hiZisZ29O2oijgz2dxQ&key=AIzaSyAyIEd-qtixd_8xUbcGRPIpO40q3tS-M5g');
+// data yang dikembalikan berupa teks
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+// eksekusi
+$result = curl_exec($curl);
+
+$result = json_decode($result,true);
+var_dump($result);
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
