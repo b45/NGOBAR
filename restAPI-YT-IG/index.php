@@ -10,8 +10,10 @@ curl_close($curl);
 
 $result = json_decode($result,true);
 
-// pengambilan yt profile picture
+// pengambilan data dari youtube
 $ytProfilePic = $result['items'][0]['snippet']['thumbnails']['medium']['url'];
+$ytChName = $result['items'][0]['snippet']['title'];
+$ytSubs = $result['items'][0]['statistics']['subscriberCount'];
 
 ?>
 
@@ -100,8 +102,8 @@ $ytProfilePic = $result['items'][0]['snippet']['thumbnails']['medium']['url'];
                 <img src="<?= $ytProfilePic ;?>" width="200" class="rounded-circle img-thumbnail">
               </div>
               <div class="col-md-8">
-                <h5>Web Programming UNPAS</h5>
-                <p>7000 Subscribers</p>
+                <h5><?= $ytChName ;?></h5>
+                <p><?= $ytSubs ;?> Subscribers</p>
               </div>
             </div>
             <div class="row mt-3 pb-3">
